@@ -1,0 +1,58 @@
+ReelAI Project Specification
+============================
+
+Overview:
+---------
+ReelAI reimagines a TikTok-like social video platform with an AI-first approach.
+The project aims to streamline video creation, editing, and content discovery by integrating advanced AI features throughout the development process.
+The focus is on delivering a complete end-to-end experience for one primary user type: either Content Creators or Content Consumers.
+
+Key Features:
+-------------
+• Fully functional social video platform with video upload, processing, basic AI-assisted editing, playback, and social interaction (likes, comments, shares).
+• Vertical slice development: Build complete features for a single user type (Content Creator or Content Consumer) before expanding.
+• AI Augmentation: Integrate two substantial AI features to enhance user experience. Examples include:
+   - For Creators (SmartEdit): Voice commands such as "remove awkward pause", "zoom on product", and "enhance lighting" to automatically edit videos.
+   - For Consumers (SmartScan/PersonalLens): Capabilities like jumping to key segments, searching specific content details, and receiving personalized recommendations.
+
+Core User Stories:
+--------------------
+For Content Creators:
+  - "As a fitness coach, I want to add exercise timestamps to my workout videos."
+  - "As a fitness coach, I want to tag videos with difficulty levels."
+  - "As a fitness coach, I want to categorize videos by muscle group."
+
+For Content Consumers:
+  - "As a home cook, I want to save recipes by cuisine type."
+  - "As a home cook, I want to filter videos by cooking time."
+  - "As a home cook, I want to create collections of weeknight dinner ideas."
+
+Technical Architecture:
+-----------------------
+• Firebase Ecosystem:
+    - Firebase Authentication: For secure user sign-up and login.
+    - Firebase Cloud Storage: To store and serve video and media assets.
+    - Firestore: A real-time NoSQL database for managing metadata and user data.
+    - Firebase Cloud Functions: To handle serverless backend logic and integrations with external APIs.
+    - Firebase Generative AI: To drive advanced AI-enabled editing features.
+    - Cloud Messaging: For real-time notifications.
+    - Firebase Hosting: For reliable deployment of mobile components.
+
+• Video Processing:
+    - OpenShot Video Editing API: Provides video trimming, transitions, and automated editing workflows.
+
+• Mobile Development:
+    - Native development using Swift (iOS) or Kotlin (Android), ensuring deep integration with Firebase SDKs and other services.
+
+Development Strategy:
+---------------------
+• Develop complete vertical slices that deliver an end-to-end user experience before integrating additional features.
+• Prioritize building a robust workflow for video upload, processing, and publication.
+• Iteratively integrate sophisticated AI functionalities to further enhance the platform—starting with core features, then augmenting with AI-assisted editing and smart content discovery.
+
+Evaluation and Testing:
+-----------------------
+• Ensure thorough testing of both core functionalities and AI enhancements.
+• Use iterative feedback mechanisms to refine AI features and overall user interactions.
+
+This specification is designed to inform a large language model assisting in development, providing essential details on functionality, technical decisions, user experience, and development strategy for the ReelAI project. 
