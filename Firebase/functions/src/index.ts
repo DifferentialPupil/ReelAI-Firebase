@@ -28,9 +28,10 @@ export const authSignUpTrigger = functions.auth.user().onCreate(async (user: Use
     logger.info("User created", {structuredData: true});
 
     try {
-        const userData: Partial<User> = {
+        const userData: User = {
             username: user.displayName || "",
             email: user.email || "",
+            bio: "",
             profilepictureurl: user.photoURL || "",
             createdat: Timestamp.now(),
             updatedat: Timestamp.now()
